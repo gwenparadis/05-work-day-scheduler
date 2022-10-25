@@ -26,6 +26,7 @@ textarea {
 }
 
 .time-block {
+  display: inline-block;
   text-align: center;
   border-radius: 15px;
 }
@@ -58,6 +59,7 @@ textarea {
 }
 
 .saveBtn {
+  display: inline-block;
   border-left: 1px solid black;
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;

@@ -4,7 +4,7 @@ $("#currentDay").text(currentDay)
 
 //past time gray background, current time red background, future time green background
 const rows = document.getElementsByClassName("row");
-let currentHour = parseInt(moment().format('H')) - 2;
+let currentHour = parseInt(moment().format('H'));
 
 Array.from(rows).forEach(function(row) {
   let

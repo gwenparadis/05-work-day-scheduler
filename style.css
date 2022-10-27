@@ -38,6 +38,8 @@ textarea {
 }
 
 .hour {
+  width: 10%;
+  text-align: right;
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
@@ -59,6 +61,7 @@ textarea {
 }
 
 .saveBtn {
+  width: 8%;
   display: inline-block;
   border-left: 1px solid black;
   border-top-right-radius: 15px;

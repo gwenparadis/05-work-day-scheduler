@@ -15,7 +15,7 @@ Once the webpage has been accessed using the Installation guidelines above, the 
 
 ## Credits
 
-This project was derived from source code provided from the UNH Coding Bootcamp. The original code included the CSS styling and most of the html, excluding the timeblocks, row format, text input boxes, and save buttons.
+This project was derived from source code provided from the UNH Coding Bootcamp. The original code included the CSS styling and most of the html, excluding the timeblocks, row format, text input boxes, and save buttons. The javascript is completely original.
 
 ## License
 

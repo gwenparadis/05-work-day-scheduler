@@ -1,3 +1,5 @@
+let events = ['', '', '', '', '', '', '', '', ''];
+
 // current day displayed at the top of the page using moment.js
 let currentDay = moment().format("dddd, MMMM Do, YYYY");
 $("#currentDay").text(currentDay)
@@ -30,19 +32,35 @@ Array.from(rows).forEach(function (row) {
 
 //save button variables
 const saveBtns = document.getElementsByClassName('saveBtn');
-let scheduledItems = document.getElementsByClassName('schedule-item').value;
 
 //save to local storage
 
 
 for (let i = 0; i < saveBtns.length; i++) {
   //add event listener:
-  saveBtns[i].addEventListener("click", function() {
+  saveBtns[i].addEventListener("click", function(e) {
+    const btnClicked = e.target;
+    const index = btnClicked.parentElement.getAttribute('id') - 9;
+    const scheduledItem = btnClicked.parentElement.children[2];
+
+    events[index] = scheduledItem.value;
+    
     //confirm the click function is working:
     console.log("you clicked save, bestie!");
 
     //use save button to set the scheduled items to local storage
-    localStorage.setItem('schedule-item', scheduledItems);
+    localStorage.setItem('work-day-schedule', JSON.stringify(events));
     console.log(localStorage.key('schedule-item'));
   });
+};
+
+// turn string back into array, show on screen retrieving from local storage
+function renderSchedule() {
+  //const inputBoxes = document.getElement
+  const scheduleStr = localStorage.getItem('work-day-schedule');
+  if (scheduleStr) {
+    const scheduleArr = JSON.parse(scheduleStr);
+    for (let i = 0; i < scheduleArr.length; i++) {
+      scheduleArr
+    };
 };

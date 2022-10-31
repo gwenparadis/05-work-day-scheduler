@@ -1,5 +1,5 @@
 // current day displayed at the top of the page using moment.js
-let currentDay = moment().format("dddd MMM Do, YYYY");
+let currentDay = moment().format("dddd, MMMM Do, YYYY");
 $("#currentDay").text(currentDay)
 
 //past time gray background, current time red background, future time green background
@@ -28,28 +28,21 @@ Array.from(rows).forEach(function (row) {
   }
 });
 
-//adds functionality to the save buttons:
+//save button variables
 const saveBtns = document.getElementsByClassName('saveBtn');
-let userInput = document.getElementsByClassName('schedule-item');
+let scheduledItems = document.getElementsByClassName('schedule-item').value;
+
+//save to local storage
+
 
 for (let i = 0; i < saveBtns.length; i++) {
-//add event listener:
-saveBtns[i].addEventListener("click", function() {
-  console.log("you clicked save, bestie!")
+  //add event listener:
+  saveBtns[i].addEventListener("click", function() {
+    //confirm the click function is working:
+    console.log("you clicked save, bestie!");
 
-  //save button saves the item to that line, persists even after refresh
-});
+    //use save button to set the scheduled items to local storage
+    localStorage.setItem('schedule-item', scheduledItems);
+    console.log(localStorage.key('schedule-item'));
+  });
 };
-
- /*
-saveEvent(userInput.value);
-console.log(localStorage.key(userInput.value));
-console.log(localStorage.getItem(userInput.value));
-
-function saveEvent(scheduleItem) {
-  localStorage.setItem(scheduleItem);
-};
-*/
-
-//save button sets userinput to local storage
-//get local storage to replace text in the input box

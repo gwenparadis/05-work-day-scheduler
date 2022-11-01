@@ -54,13 +54,17 @@ for (let i = 0; i < saveBtns.length; i++) {
   });
 };
 
-// turn string back into array, show on screen retrieving from local storage
+// retrieve items from local storage, parse back into array, display on screen
 function renderSchedule() {
-  //const inputBoxes = document.getElement
+  const inputBoxes = document.getElementsByClassName('schedule-item')
   const scheduleStr = localStorage.getItem('work-day-schedule');
+  console.log(scheduleStr);
   if (scheduleStr) {
     const scheduleArr = JSON.parse(scheduleStr);
     for (let i = 0; i < scheduleArr.length; i++) {
-      scheduleArr
+      inputBoxes[i].value = scheduleArr[i];
     };
 };
+};
+
+renderSchedule();

@@ -5,7 +5,7 @@ This project is a work day scheduler, allowing the user to see the current date 
 
 ## Installation
 
-This webpage can be accessed on Github Pages, at the link:
+This webpage can be accessed on Github Pages, at the link: https://gwenparadis.github.io/work-day-scheduler/
 
 ## Usage
 

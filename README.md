@@ -11,7 +11,7 @@ This webpage can be accessed on Github Pages, at the link:
 
 Once the webpage has been accessed using the Installation guidelines above, the user can edit the text in the text boxes, as desired. The intent is for the user to write their desired tasks or plans for that day in the text box that best matches the time range of the activity. The user can then click on the save button at the end of that row, setting the edited text to Local Storage. This allows the user to continue to access their additions to the webpage even after they refresh the page. The date and time will remain current throughout use.
 
-![Portfolio Readme Screenshot]
+![Scheduler Readme Screenshot](./assets/work-day-scheduler-screenshot.png)
 
 ## Credits
 
